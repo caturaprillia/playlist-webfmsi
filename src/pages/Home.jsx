@@ -60,13 +60,7 @@ function Home() {
         size="large"
         placeholder="what are you looking for?"
         prefix={<SearchOutlined />}
-        style={{
-          margin: "20px 0 40px 0",
-          borderRadius: 10,
-          maxWidth: 1300,
-          boxShadow: "0 5px 8px #e6e6e6",
-          height: 50,
-        }}
+        style={{ margin: '20px 0 40px 0', borderRadius: 10, maxWidth: 1300, minHeight: '6.5vh', boxShadow: '0 5px 8px #e6e6e6' }}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         allowClear
@@ -126,22 +120,11 @@ function Home() {
                 <Text type="secondary" style={{ fontSize: 15 }}>
                   {item.play_description}
                 </Text>
-                {/* <div style={{ marginTop: 18, display: 'flex', gap: 16 }}>
-                  <EditOutlined style={{ fontSize: 20, cursor: 'pointer' }} />
-                  <EyeOutlined style={{ fontSize: 20, cursor: 'pointer' }} />
-                  <DeleteOutlined style={{ fontSize: 20, cursor: 'pointer' }} />
-                </div> */}
               </Card>
             </Col>
           ))}
         </Row>
       )}
-      <FloatButton
-        icon={<PlusOutlined />}
-        type="primary"
-        style={{ right: 24, bottom: 24 }}
-        tooltip={<div>Add New</div>}
-      />
     </div>
   );
 }

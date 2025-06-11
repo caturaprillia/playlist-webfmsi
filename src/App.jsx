@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import { Layout } from 'antd'
 import Playlist from './pages/Playlist'
 import Home from './pages/Home'
+import About from './pages/About'
 
 const { Content } = Layout
 
@@ -17,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/playlist" element={<Playlist />} />
-            <Route path="/about" element={<div>About Page</div>} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Content>
         <Footer />
